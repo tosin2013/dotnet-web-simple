@@ -4,13 +4,12 @@ metadata:
 components:
   - name: tools
     container:
-      image: registry.redhat.io/devspaces/udi-rhel8:3.5
+      image: registry.redhat.io/devspaces/udi-rhel8@sha256:aa39ede33bcbda6aa2723d271c79ab8d8fd388c7dfcbc3d4ece745b7e9c84193
       memoryLimit: 2Gi
       mountSources: true
       endpoints:
         - exposure: public
           name: 'hello-endpoint'
-          protocol: http
           targetPort: 5032
       volumeMounts:
         - name: nuget
